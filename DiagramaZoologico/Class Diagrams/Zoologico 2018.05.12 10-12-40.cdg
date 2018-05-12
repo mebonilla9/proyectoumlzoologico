@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Zoologico">
+  <ClassDiagramComponents>
+    <Class name="Mojarra" package="co.appreactor.zoologico.animales" visibility="public" xPosition="1370.0" yPosition="422.0">
+      <Fields>
+        <Field name="capacidadProfundidad" type="int" visibility="public"/>
+        <Field name="color" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="capacidadProfundidad"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="capacidadProfundidad"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="nadar" returnType="void" visibility="public"/>
+        <Method name="refrigerar" returnType="void" visibility="public"/>
+        <Method name="sazonar" returnType="void" visibility="public"/>
+        <Method name="cocinar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cocodrillo" package="co.appreactor.zoologico.animales" visibility="public" xPosition="465.0" yPosition="357.0">
+      <Fields>
+        <Field name="dientes" type="int" visibility="public"/>
+        <Field name="longitud" type="double" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="dientes"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="dientes"/>
+          <Argument type="double" name="longitud"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="morder" returnType="void" visibility="public"/>
+        <Method name="emboscar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pato" package="co.appreactor.zoologico.animales" visibility="public" xPosition="879.0" yPosition="397.0">
+      <Fields>
+        <Field name="embergaduraAlas" type="double" visibility="public"/>
+        <Field name="tamañoPico" type="double" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="embergaduraAlas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="embergaduraAlas"/>
+          <Argument type="double" name="tamañoPico"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hacerQuack" returnType="void" visibility="public"/>
+        <Method name="jugar" returnType="void" visibility="public"/>
+        <Method name="pasear" returnType="void" visibility="public"/>
+        <Method name="acariciar" returnType="void" visibility="public"/>
+        <Method name="refrigerar" returnType="void" visibility="public"/>
+        <Method name="sazonar" returnType="void" visibility="public"/>
+        <Method name="cocinar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="co.appreactor.zoologico.animales" visibility="public" xPosition="69.0" yPosition="235.0">
+      <Fields>
+        <Field name="peloLargo" type="boolean" visibility="public"/>
+        <Field name="garrasLargas" type="boolean" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="peloLargo"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="peloLargo"/>
+          <Argument type="boolean" name="garrasLargas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ronronear" returnType="void" visibility="public"/>
+        <Method name="maullar" returnType="void" visibility="public"/>
+        <Method name="jugar" returnType="void" visibility="public"/>
+        <Method name="pasear" returnType="void" visibility="public"/>
+        <Method name="acariciar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Animal" package="co.appreactor.zoologico" visibility="public" xPosition="949.0" yPosition="36.0">
+      <Fields>
+        <Field name="edad" type="int" visibility="protected"/>
+        <Field name="sexo" type="char" visibility="protected"/>
+        <Field name="peso" type="double" visibility="protected"/>
+        <Field name="tamano" type="double" visibility="protected"/>
+        <Field name="especie" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="respirar" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="dormir" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Comestible" package="co.appreactor.zoologico" visibility="public" xPosition="1148.0" yPosition="794.0">
+      <Methods>
+        <Method name="refrigerar" returnType="void" visibility="public"/>
+        <Method name="sazonar" returnType="void" visibility="public"/>
+        <Method name="cocinar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Domesticable" package="co.appreactor.zoologico" visibility="public" xPosition="640.0" yPosition="765.0">
+      <Methods>
+        <Method name="jugar" returnType="void" visibility="public"/>
+        <Method name="pasear" returnType="void" visibility="public"/>
+        <Method name="acariciar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="co.appreactor.zoologico.animales.Mojarra" target="co.appreactor.zoologico.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="co.appreactor.zoologico.animales.Gato" target="co.appreactor.zoologico.Domesticable"/>
+    <IsRelation name="is" source="co.appreactor.zoologico.animales.Pato" target="co.appreactor.zoologico.Animal"/>
+    <IsRelation name="is" source="co.appreactor.zoologico.animales.Gato" target="co.appreactor.zoologico.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="co.appreactor.zoologico.animales.Mojarra" target="co.appreactor.zoologico.Comestible"/>
+    <IsRelation name="is" source="co.appreactor.zoologico.animales.Cocodrillo" target="co.appreactor.zoologico.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="co.appreactor.zoologico.animales.Pato" target="co.appreactor.zoologico.Comestible"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="co.appreactor.zoologico.animales.Pato" target="co.appreactor.zoologico.Domesticable"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
